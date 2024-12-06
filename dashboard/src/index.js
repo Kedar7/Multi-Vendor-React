@@ -4,6 +4,7 @@ import { BrowserRouter } from "react-router-dom";
 import reportWebVitals from "./reportWebVitals";
 import "./index.css";
 import store from './store/index';
+import { Provider } from 'react-redux';
 const App = lazy(() => import("./App"));
 
 

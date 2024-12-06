@@ -1,5 +1,4 @@
-import { authReducer } from "./Reducer/authReducer";
-
+import authReducer from "./Reducers/authReducer";
 const rootReducer = {
     auth : authReducer
 }
