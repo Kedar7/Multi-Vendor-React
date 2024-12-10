@@ -17,6 +17,5 @@ const publicRoutes = [
         path :'/admin/login',
         element:<AdminLogin/>
     },
-    { path: "admin/dashboard", element: <AdminDashboard/> },
 ]
 export default publicRoutes
