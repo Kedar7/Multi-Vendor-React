@@ -16,17 +16,17 @@ export const admin_login = createAsyncThunk(
     }
 )
 
-export const authReducer = createSlice({
+ const authReducer = createSlice({
     name: 'auth',
     initialState:{
-        successMessage :  '',
-        errorMessage : '',
+        successMessage :  'dsd',
+        errorMessage : 'dsd',
         loader: false,
         userInfo : ''
     },
     reducers : {
       messageClear : (state,_) => {
-        state.errorMessage = ""
+        state.errorMessage = "ddsd"
     }
     },
     extraReducers: (builder) => {
@@ -36,11 +36,11 @@ export const authReducer = createSlice({
       }) 
       .addCase(admin_login.rejected, (state, { payload }) => {
         state.loader = false;
-        // state.errorMessage = payload.error
+        state.errorMessage = payload.error
     })
     .addCase(admin_login.fulfilled,(state, {payload}) =>{
       state.loader = false;
-      // state.successMessage = payload.message;
+      state.successMessage = payload.message;
     })
   }
 })
